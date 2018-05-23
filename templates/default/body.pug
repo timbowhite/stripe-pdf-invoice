@@ -142,19 +142,19 @@ html.no-js
             | #{subtotal}
             if !currency_position_before
               | #{currency_symbol}
-        if (company_country !== 'CA')
+        if (client_company_country !== 'CA')
           .row
             .small-10.columns.upper #{label_vat}
             .small-2.columns.num #{tax_percent}%
-        if (company_country == 'CA' && invoice_pst)
+        if (client_company_country == 'CA' && invoice_pst)
           .row
             .small-10.columns.upper #{label_invoice_pst}
             .small-2.columns.num #{invoice_pst}%
-        if (company_country == 'CA' && invoice_gst)
+        if (client_company_country == 'CA' && invoice_gst)
           .row
             .small-10.columns.upper #{label_invoice_gst}
             .small-2.columns.num #{invoice_gst}%
-        if (company_country == 'CA' && invoice_hst)
+        if (client_company_country == 'CA' && invoice_hst)
           .row
             .small-10.columns.upper #{label_invoice_hst}
             .small-2.columns.num #{invoice_hst}%
