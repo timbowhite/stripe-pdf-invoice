@@ -142,9 +142,22 @@ html.no-js
             | #{subtotal}
             if !currency_position_before
               | #{currency_symbol}
-        .row
-          .small-10.columns.upper #{label_vat}
-          .small-2.columns.num #{tax_percent}%
+        if (company_country !== 'CA')
+          .row
+            .small-10.columns.upper #{label_vat}
+            .small-2.columns.num #{tax_percent}%
+        if (company_country == 'CA' && invoice_pst)
+          .row
+            .small-10.columns.upper #{label_invoice_pst}
+            .small-2.columns.num #{invoice_pst}%
+        if (company_country == 'CA' && invoice_gst)
+          .row
+            .small-10.columns.upper #{label_invoice_gst}
+            .small-2.columns.num #{invoice_gst}%
+        if (company_country == 'CA' && invoice_hst)
+          .row
+            .small-10.columns.upper #{label_invoice_hst}
+            .small-2.columns.num #{invoice_hst}%
         .row.total-line.upper
           .small-10.columns #{label_total}
           .small-2.columns.num
@@ -156,7 +169,7 @@ html.no-js
     .row.footer
       .columns
         .row
-          .small-3.columns
+          .small-4.columns
             .row
               .columns.component-title
                 | #{label_invoice_by}
@@ -174,7 +187,7 @@ html.no-js
                 .row
                   .columns
                     | #{company_country}
-          .small-3.columns
+          .small-4.columns
             .row
               .columns.component-title
                 | #{label_invoice_date}
@@ -187,32 +200,18 @@ html.no-js
             .row
               .columns.num
                 | ##{number}
-          .small-3.columns
-            .row
-              .columns.component-title
-                | #{label_invoice_due_date}
-            .row.white-small
-              .columns
-                | #{due_date_formatted}
-            if receipt_number
+          .small-4.columns
+            if gst
               .row
                 .columns.component-title
-                  | #{label_reference_number}
-              .row
-                .columns.num
-                  | #{receipt_number}
-          .small-3.columns
-            if company_siret
-              .row
-                .columns.component-title
-                  | #{label_company_siret}
+                  | #{label_gst}
               .row.white-small
-                .columns.num
-                  | #{company_siret}
-            if company_vat_number
+                .columns
+                  | #{gst}
+            if pst
               .row
                 .columns.component-title
-                  | #{label_company_vat_number}
+                  | #{label_pst}
               .row
                 .columns.num
-                  | #{company_vat_number}
+                  | #{pst}
