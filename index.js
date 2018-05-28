@@ -33,7 +33,7 @@ module.exports = (key, config = {}) => async (invoiceId, data = {}) => {
     label_invoice_gst: 'GST',
     label_invoice_pst: 'PST',
     label_invoice_hst: 'HST',
-    label_amunt_duo: 'Amunt duo',
+    label_total: 'Total',
     label_gst: 'GST #:',
     label_pst: 'PST #:',
     company_name: 'My company',

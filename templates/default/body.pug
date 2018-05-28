@@ -102,7 +102,7 @@ html.no-js
               .small-7.columns.component-title #{label_description}
               .small-1.columns.component-title.text-center #{label_qty}
               .small-2.columns.component-title.text-right #{label_price}
-              .small-2.columns.component-title.text-right #{label_amount}
+              .small-2.columns.component-title.text-right #{label_total}
             each line in lines.data
               .row.item-padding
                 .small-12.columns.period
@@ -151,7 +151,7 @@ html.no-js
                     .small-6.columns.text-right.item-text #{label_invoice_hst}
                     .small-6.columns.text-right.item-text #{invoice_hst}%
                 .row.item-total
-                  .small-6.columns.text-right.item-text #{label_amunt_duo}
+                  .small-6.columns.text-right.item-text #{label_total}
                   .small-6.columns.text-right.item-text
                     if currency_position_before
                       | #{currency_symbol}
