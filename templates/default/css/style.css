@@ -20,7 +20,7 @@
 .invoice-content {
   color: #32325d;
   font-family: 'OpenSans-Regular';
-  font-size: 8px;
+  font-size: 10px;
 }
 .title {
   font-size: 22px;
@@ -34,8 +34,8 @@
 .inline {
   display: inline;
 }
-.pb-20 {
-  padding-bottom: 20px;
+.pb-15 {
+  padding-bottom: 15px;
 }
 .plr-10 {
   padding-left: 10px;
