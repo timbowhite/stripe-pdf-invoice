@@ -1,78 +1,104 @@
 @font-face {
-  font-family: 'Lato-Regular';
+  font-family: 'OpenSans-Regular';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/Lato-Regular.ttf) format('truetype');
+  src: url(../fonts/OpenSans-Regular.ttf) format('truetype');
 }
-
 @font-face {
-  font-family: 'Envy-Code';
+  font-family: 'OpenSans-Bold';
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/Envy-Code-R.ttf) format('truetype');
+  src: url(../fonts/OpenSans-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/OpenSans-SemiBold.ttf) format('truetype');
 }
 
-.layout {
-  font-family: Lato-Regular;
-  color: #4d4d4d;
+body {
+  color: #32325d;
+  font-family: 'OpenSans-Regular';
   line-height:1.5;
   font-size: 15px;
 }
-
+h1 {
+  font-size: 40px;
+  font-family: 'OpenSans-SemiBold';
+  font-weight: 600;
+}
+.strong {
+  font-family: 'OpenSans-Bold';
+  font-weight: 900;
+}
+.inline {
+  display: inline;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.plr-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.pr-10 {
+  padding-right: 10px;
+}
+.pt-15 {
+  padding-top: 15px;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
 .invoice-body {
   display:block;
   min-height:840px;
 }
+.invoice {
+  text-align: right;
+  font-size: 30px;
+  line-height: 70px;
+  color: #8898aa;
+}
+.item-header {
+  border-bottom: 2px solid #aab7c4;
+  padding: 15px;
+}
+.component-title {
+  font-family: 'OpenSans-Bold';
+  font-weight: 900;
+}
+.item {
+  background-color: #f6f9fc;
+  padding: 15px;
+  border-bottom: 2px solid #aab7c4;
+}
+.item-vat,
+.item-subtotal {
+  border-bottom: 2px solid #aab7c4;
+}
+.item-text {
+  padding: 15px;
+}
+.item-padding {
+  padding: 15px;
+}
+.period {
+  text-transform: uppercase;
+  color: #8898aa;
+}
+.item-total {
+  color: #404068;
+  background-color: #e6ebf1;
+}
 
 .footer {
+  padding-top: 15px;
+  border-top: 2px solid #aab7c4;
   display:block;
   height:110px;
-}
-
-.white-big {
-  padding-bottom: 100px;
-}
-
-.white-small {
-  padding-bottom: 30px;
-}
-
-.invoice {
-  font-size: 30px;
-}
-
-.upper {
-  text-transform: uppercase;
-}
-
-.date {
-  padding-top: 15px;
-}
-
-.num {
-  font-family: 'Envy-Code';
-}
-
-.total {
-  text-align: center;
-}
-
-.total h1 {
-  font-size: 40px;
-}
-
-.total-line {
-  font-weight: bold;
-  font-size: 17px;
-}
-
-.component-title {
-  font-size: 13px;
-  color: #BDC3C7;
-  text-transform: uppercase;
-}
-
-.address {
-  padding-top: 15px;
-  font-size: 13px;
 }
