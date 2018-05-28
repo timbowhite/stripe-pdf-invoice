@@ -20,11 +20,11 @@
 body {
   color: #32325d;
   font-family: 'OpenSans-Regular';
-  line-height:1.5;
-  font-size: 13px;
+  line-height: 1.5;
+  font-size: 11px;
 }
 h1 {
-  font-size: 30px;
+  font-size: 26px;
   font-family: 'OpenSans-SemiBold';
   font-weight: 600;
 }
@@ -38,15 +38,15 @@ h1 {
 .pb-20 {
   padding-bottom: 20px;
 }
-.plr-15 {
-  padding-left: 15px;
-  padding-right: 15px;
+.plr-10 {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .pr-10 {
   padding-right: 10px;
 }
-.pt-15 {
-  padding-top: 15px;
+.pt-10 {
+  padding-top: 10px;
 }
 .text-right {
   text-align: right;
@@ -60,13 +60,13 @@ h1 {
 }
 .invoice {
   text-align: right;
-  font-size: 30px;
-  line-height: 70px;
+  font-size: 22px;
+  line-height: 50px;
   color: #8898aa;
 }
 .item-header {
   border-bottom: 2px solid #aab7c4;
-  padding: 15px;
+  padding: 10px;
 }
 .component-title {
   font-family: 'OpenSans-Bold';
@@ -74,7 +74,7 @@ h1 {
 }
 .item {
   background-color: #f6f9fc;
-  padding: 15px;
+  padding: 10px;
   border-bottom: 2px solid #aab7c4;
 }
 .item-vat,
@@ -82,10 +82,10 @@ h1 {
   border-bottom: 2px solid #aab7c4;
 }
 .item-text {
-  padding: 15px;
+  padding: 10px;
 }
 .item-padding {
-  padding: 15px;
+  padding: 10px;
 }
 .period {
   text-transform: uppercase;
@@ -97,7 +97,7 @@ h1 {
 }
 
 .footer {
-  padding-top: 15px;
+  padding-top: 10px;
   border-top: 2px solid #aab7c4;
   display:block;
   height: 110px;
