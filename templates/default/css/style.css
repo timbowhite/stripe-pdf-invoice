@@ -21,6 +21,7 @@
   color: #32325d;
   font-family: 'OpenSans-Regular';
   font-size: 11px;
+  padding-top: 20px;
 }
 .title {
   font-size: 22px;
@@ -55,7 +56,7 @@
 }
 .invoice-body {
   display:block;
-  min-height:840px;
+  min-height:820px;
 }
 .invoice {
   text-align: right;
