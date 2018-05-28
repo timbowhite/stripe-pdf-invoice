@@ -17,13 +17,12 @@
   src: url(../fonts/OpenSans-SemiBold.ttf) format('truetype');
 }
 
-body {
+.invoice-content {
   color: #32325d;
   font-family: 'OpenSans-Regular';
-  line-height: 1.5;
-  font-size: 6px;
+  font-size: 8px;
 }
-h1 {
+.title {
   font-size: 22px;
   font-family: 'OpenSans-SemiBold';
   font-weight: 600;

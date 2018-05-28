@@ -20,12 +20,12 @@ html.no-js
     meta(name='viewport', content='width=device-width, initial-scale=1')
     each sheet in css
       link(rel='stylesheet', href=sheet, type='text/css')
-  body
+  body.invoice-content
     .row.invoice-body
       .columns
         .row.pb-20.plr-10
           .columns.small-8
-            h1
+            h1.title
               | #{company_name}
           .columns.small-4.invoice
             | #{label_invoice}
@@ -87,7 +87,7 @@ html.no-js
               .columns.text-right.strong #{date_formatted}
         .row.pb-20.plr-10
           .columns.small-12
-            h1
+            h1.title
               if currency_position_before
                 | #{currency_symbol}
                 | #{total}&nbsp
