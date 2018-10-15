@@ -17,6 +17,8 @@
   src: url(../fonts/OpenSans-SemiBold.ttf) format('truetype');
 }
 
+.small-invoice-body-13 {width:13.66667%}
+.small-invoice-body-19 {width:19.66667%}
 .invoice-content {
   color: #32325d;
   font-family: 'OpenSans-Regular';
