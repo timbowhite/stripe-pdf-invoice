@@ -17,8 +17,9 @@
   src: url(../fonts/OpenSans-SemiBold.ttf) format('truetype');
 }
 
-.small-invoice-body-14 {width:14.66667%}
-.small-invoice-body-18 {width:18.66667%}
+.company-box{width:32.33333%}
+.date-label{width:15.66667%}
+.date-invoice{width:17.66667%}
 
 .invoice-content {
   color: #32325d;
