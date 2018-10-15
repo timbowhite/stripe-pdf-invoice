@@ -15,7 +15,7 @@ module.exports = (key, config = {}) => async (invoiceId, data = {}) => {
   }
   const invoice = await stripe.invoices.retrieve(invoiceId);
   const tpld = template(Object.assign({
-    currency_symbol: 'C$',
+    currency_symbol: '$',
     label_invoice: 'Invoice',
     label_payable_to: 'Payable to',
     label_bill_to: 'Bill to',
