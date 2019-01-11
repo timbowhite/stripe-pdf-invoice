@@ -164,36 +164,7 @@ html.no-js
                       | #{currency_symbol}
     .row.footer.plr-10
       .columns
-        .row
-          .small-9.columns
-            .row
-              .columns.strong
-                | #{company_name}
-            .row
-              .columns
-                | #{company_address}
-            .row
-              .columns
-                | #{company_city} #{company_zipcode}
-            .row
-              .columns
-                | #{company_country}
-          .small-3.columns
-            if gst
-              .row
-                .columns.strong
-                  | #{label_gst}
-              .row
-                .columns
-                  | #{gst}
-            if pst
-              .row
-                .columns.strong
-                  | #{label_pst}
-              .row
-                .columns
-                  | #{pst}
         .row.pt-10
           .small-12
             .strong.inline Questions?&nbsp 
-            .span.inline Contact Vacation Tracker at support@vacationtracker.io
+            .span.inline Contact #{company_email} 
