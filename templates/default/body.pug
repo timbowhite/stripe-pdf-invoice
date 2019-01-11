@@ -114,7 +114,7 @@ html.no-js
                   | #{label_to}
                   | #{moment.unix(line.period.end).locale(language).format(date_format)}
               .row.item
-                .small-7.columns #{line.plan.nickname || 'Item description'}
+                .small-7.columns #{line.plan.name || line.plan.nickname || 'Item description'}
                 .small-1.columns.text-center #{line.quantity}
                 .small-2.columns.text-right
                   if currency_position_before
