@@ -85,13 +85,20 @@ var StripePdfInvoice = function(opt){
         .then(function(){
             const tpld = template(Object.assign({}, opt.invoice, that.config, opt));
 
-          return wkhtmltopdf(pug.compileFile(tpld.body)(Object.assign(tpld.data, {
-            moment,
-            path,
-            fs,
-            sizeOf
-          })), { pageSize: 'letter' });
-            
+            var def = Q.defer();
+            wkhtmltopdf(pug.compileFile(tpld.body)(Object.assign(tpld.data, {
+                moment,
+                path,
+                fs,
+                sizeOf
+            })),
+            { pageSize: 'letter'}, function(err, stream){
+
+                if (err) return def.reject(err);
+                def.resolve(stream);
+            });
+
+            return def.promise;
         });
     }
 
