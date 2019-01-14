@@ -35,11 +35,12 @@ var spi = new StripePdfInvoice({
 
 return spi.generate({
     invoice_id: 'xxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    client_company_name: 'Client Company',
-    client_company_address: '1 Infinite Loop',
-    client_company_zipcode: '95014',
-    client_company_city: 'Cupertino, CA',
-    client_company_country: 'USA',
+    client_company_address: [
+        'George Costanza', 
+        '159 W. 23rd str', 
+        'APT 419', 
+        'New York City, New York 12345'
+    ],
     label_invoice: 'Receipt',
     label_due: 'paid'
 })
@@ -76,11 +77,7 @@ company_country (String)
 company_siret (String)
 company_vat_number (String)
 
-client_company_name (String)
-client_company_address (String)
-client_company_zipcode (String)
-client_company_city (String)
-client_company_country (String)
+client_company_address (Array of strings)
 
 label_invoice (String)
 label_invoice_to (String)
@@ -93,7 +90,8 @@ label_price (String)
 label_amount (String)
 label_subtotal (String)
 label_total (String)
-label_vat (String)
+label_tax (String)
+tax_percent (Number)
 label_invoice_by (String)
 label_invoice_date (String)
 label_company_siret (String)

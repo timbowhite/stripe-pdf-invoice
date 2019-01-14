@@ -60,18 +60,11 @@ html.no-js
             .row
               .columns.strong
                 | #{label_bill_to}
-            .row
-              .columns
-                | #{client_company_name}
-            .row
-              .columns
-                | #{client_company_address}
-            .row
-              .columns
-                | #{client_company_city} #{client_company_zipcode}
-            .row
-              .columns
-                | #{client_company_country}
+            if client_company_address   
+                each str in client_company_address.length ? client_company_address : []
+                  .row
+                    .columns
+                      | #{str}
           .columns.date-label
             .row
               .columns.text-right
@@ -138,22 +131,10 @@ html.no-js
                     | #{subtotal}
                     if !currency_position_before
                       | #{currency_symbol}
-                if (client_company_country !== 'CA')
+                if (label_tax)
                   .row.item-vat
-                    .small-6.columns.text-right.item-text #{label_vat}
+                    .small-6.columns.text-right.item-text #{label_tax}
                     .small-6.columns.text-right.item-text #{tax_percent}%
-                if (client_company_country == 'CA' && invoice_pst)
-                  .row.item-vat
-                    .small-6.columns.text-right.item-text #{label_invoice_pst}
-                    .small-6.columns.text-right.item-text #{invoice_pst}%
-                if (client_company_country == 'CA' && invoice_gst)
-                  .row.item-vat
-                    .small-6.columns.text-right.item-text #{label_invoice_gst}
-                    .small-6.columns.text-right.item-text #{invoice_gst}%
-                if (client_company_country == 'CA' && invoice_hst)
-                  .row.item-vat
-                    .small-6.columns.text-right.item-text #{label_invoice_hst}
-                    .small-6.columns.text-right.item-text #{invoice_hst}%
                 .row.item-total
                   .small-6.columns.text-right.item-text #{label_total}
                   .small-6.columns.text-right.item-text
