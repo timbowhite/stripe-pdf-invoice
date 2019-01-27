@@ -68,6 +68,7 @@ date_format (String)
 due_days (Number)
 color (Number)
 
+service_name (String)
 company_name (String)
 company_logo (String)
 company_address (String)
